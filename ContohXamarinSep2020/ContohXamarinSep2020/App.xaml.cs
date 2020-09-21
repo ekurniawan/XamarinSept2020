@@ -10,7 +10,7 @@ namespace ContohXamarinSep2020
         public App()
         {
             InitializeComponent();
-            MainPage = new ContohGridLayout();
+            MainPage = new BindingListString();
         }
 
         protected override void OnStart()
