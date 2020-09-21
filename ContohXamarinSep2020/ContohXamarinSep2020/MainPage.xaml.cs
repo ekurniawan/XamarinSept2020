@@ -10,6 +10,7 @@ namespace ContohXamarinSep2020
 {
     public partial class MainPage : ContentPage
     {
+        //
         public MainPage()
         {
            

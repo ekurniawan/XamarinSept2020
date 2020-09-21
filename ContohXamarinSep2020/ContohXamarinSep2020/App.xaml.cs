@@ -6,6 +6,7 @@ namespace ContohXamarinSep2020
 {
     public partial class App : Application
     {
+        //
         public App()
         {
             InitializeComponent();
