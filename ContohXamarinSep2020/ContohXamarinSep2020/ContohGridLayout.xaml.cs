@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace ContohXamarinSep2020
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ContohAbsoluteLayout : ContentPage
+    public partial class ContohGridLayout : ContentPage
     {
-        public ContohAbsoluteLayout()
+        public ContohGridLayout()
         {
             InitializeComponent();
         }

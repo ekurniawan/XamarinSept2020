@@ -10,7 +10,7 @@ namespace ContohXamarinSep2020
         public App()
         {
             InitializeComponent();
-            MainPage = new ContohAbsoluteLayout();
+            MainPage = new ContohGridLayout();
         }
 
         protected override void OnStart()
