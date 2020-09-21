@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ContohXamarinSep2020.BindingDataMVVM"
+             Title="MVVM Binding Data">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding ListItems}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Title}" 
+                                  Detail="{Binding Description}"
+                                  DetailColor="Red"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
