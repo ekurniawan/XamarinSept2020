@@ -16,5 +16,29 @@ namespace ContohXamarinSep2020
         {
             InitializeComponent();
         }
+
+        private void prosesHitung_Clicked(object sender, EventArgs e)
+        {
+            var bil1 = Convert.ToDouble(entryBil1.Text);
+            var bil2 = Convert.ToDouble(entryBil2.Text);
+            double hasil = 0;
+            var myBtn = (Button)sender;
+            switch (myBtn.Text)
+            {
+                case "Tambah":
+                    hasil = bil1 + bil2;
+                    break;
+                case "Kurang":
+                    hasil = bil1 - bil2;
+                    break;
+                case "Bagi":
+                    hasil = bil1 / bil2;
+                    break;
+                case "Kali":
+                    hasil = bil1 * bil2;
+                    break;
+            }
+            entryHasil.Text = hasil.ToString();
+        }
     }
 }

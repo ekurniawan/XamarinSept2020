@@ -31,11 +31,13 @@
             <Label Text="Hasil :" Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center"
                     HorizontalTextAlignment="End" FontSize="Medium" />
             <Entry x:Name="entryHasil" Grid.Row="3" Grid.Column="1" 
-                   VerticalOptions="Center" Keyboard="Numeric" />
+                   VerticalOptions="Center" IsReadOnly="True" Keyboard="Numeric" />
             <StackLayout Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" 
                          Orientation="Horizontal">
-                <Button x:Name="btnTambah" Text="Tambah" />
-                <Button x:Name="btnKurang" Text="Kurang" />
+                <Button x:Name="btnTambah" Text="Tambah" Clicked="prosesHitung_Clicked" />
+                <Button x:Name="btnKurang" Text="Kurang" Clicked="prosesHitung_Clicked" />
+                <Button x:Name="btnBagi" Text="Bagi" Clicked="prosesHitung_Clicked" />
+                <Button x:Name="btnKali" Text="Kali" Clicked="prosesHitung_Clicked" />
             </StackLayout>
         </Grid>
     </ContentPage.Content>
