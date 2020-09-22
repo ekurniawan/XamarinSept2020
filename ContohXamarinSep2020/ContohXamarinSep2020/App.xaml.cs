@@ -10,7 +10,7 @@ namespace ContohXamarinSep2020
         public App()
         {
             InitializeComponent();
-            MainPage = new BindingViewData();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

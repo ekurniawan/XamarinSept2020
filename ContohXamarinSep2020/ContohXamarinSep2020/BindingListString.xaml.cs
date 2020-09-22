@@ -29,5 +29,10 @@ namespace ContohXamarinSep2020
             await DisplayAlert("Keterangan",$"Anda memilih {data}","OK");
             ((ListView)sender).SelectedItem = null;
         }
+
+        private async void btnGrid_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ContohGridLayout());
+        }
     }
 }

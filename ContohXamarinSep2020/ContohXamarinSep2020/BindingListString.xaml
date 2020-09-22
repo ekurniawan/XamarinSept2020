@@ -1,10 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ContohXamarinSep2020.BindingListString">
+             x:Class="ContohXamarinSep2020.BindingListString"
+             Title="Simple List">
     <ContentPage.Content>
         <StackLayout>
             <ListView x:Name="lvNama" ItemTapped="lvNama_ItemTapped" />
+            <Button x:Name="btnGrid" Text="Contoh Grid" Clicked="btnGrid_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

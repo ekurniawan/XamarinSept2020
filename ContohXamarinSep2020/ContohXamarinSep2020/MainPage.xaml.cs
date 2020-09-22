@@ -13,9 +13,17 @@ namespace ContohXamarinSep2020
         //
         public MainPage()
         {
-           
+            InitializeComponent();
         }
 
-        
+        private async void btnSimpleList_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new BindingListString());
+        }
+
+        private async void btnImageList_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new BindingImage());
+        }
     }
 }
