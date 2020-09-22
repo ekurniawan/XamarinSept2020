@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ContohXamarinSep2020.BindingViewData"
+             Title="Menggunakan View Cell">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lvData" HasUnevenRows="True" ItemTapped="lvData_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20" />
+                                    <RowDefinition Height="20" />
+                                    <RowDefinition Height="20" />
+                                    <RowDefinition Height="40" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="20" />
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding Title}" FontSize="Medium"
+                                       FontAttributes="Bold" Grid.Column="1" Grid.Row="0" 
+                                       VerticalOptions="Center"/>
+                                <Label Text="{Binding Description}" VerticalOptions="Center"
+                                       Grid.Column="1" Grid.Row="1" />
+                                <Label Text="{Binding Price,StringFormat='Rp.{0:N0}'}" 
+                                       VerticalOptions="Center" Grid.Column="1"
+                                       Grid.Row="2" />
+                                <Image Source="{Binding Source}" Grid.Column="0"
+                                       Grid.Row="0" Grid.RowSpan="3" VerticalOptions="Center"
+                                       HorizontalOptions="Center" />
+                                <StackLayout Orientation="Horizontal" Grid.Column="1" Grid.Row="3" 
+                                             HorizontalOptions="End">
+                                    <Button Text="Delete" CommandParameter="{Binding ID}"
+                                            Clicked="Button_Clicked"
+                                            VerticalOptions="Center" HorizontalOptions="End" />
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

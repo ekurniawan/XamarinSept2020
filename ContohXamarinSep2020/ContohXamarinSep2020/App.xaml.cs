@@ -10,7 +10,7 @@ namespace ContohXamarinSep2020
         public App()
         {
             InitializeComponent();
-            MainPage = new BindingImage();
+            MainPage = new BindingViewData();
         }
 
         protected override void OnStart()

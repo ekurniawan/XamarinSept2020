@@ -11,9 +11,9 @@ using Xamarin.Forms.Xaml;
 namespace ContohXamarinSep2020
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class BindingImage : ContentPage
+    public partial class BindingViewData : ContentPage
     {
-        public BindingImage()
+        public BindingViewData()
         {
             InitializeComponent();
 
@@ -21,31 +21,45 @@ namespace ContohXamarinSep2020
             {
                 new ListItem
                 {
+                    ID=1,
                     Title="Xamarin for Android",
                     Description = "Belajar Xamarin for Android",
-                    Source = "monkey1.png"
+                    Source = "monkey1.png",
+                    Price = 300000
                 },
                 new ListItem
                 {
+                    ID=2,
                     Title="Xamarin for IOS",
                     Description = "Belajar Xamarin for IOS",
-                    Source = "monkey2.png"
+                    Source = "monkey2.png",
+                    Price = 400000
                 },
                 new ListItem
                 {
+                    ID=3,
                     Title = "Xamarin Forms",
                     Description = "Belajar Xamarin Forms",
-                    Source = "monkey3.png"
+                    Source = "monkey3.png",
+                    Price = 700000
                 },
             };
 
-            lvGambar.ItemsSource = lstItem;
+            lvData.ItemsSource = lstItem;
         }
 
-        private async void lvGambar_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void lvData_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var data = (ListItem)e.Item;
-            await DisplayAlert($"{data.Title}", $"{data.Description}", "OK");
+            await DisplayAlert(
+                $"{data.Title}", $"Deskripsi: {data.Description} Price: {data.Price}", "OK");
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            var myBtn = (Button)sender;
+            await DisplayAlert("Keterangan", $"ID yang dipilih: {myBtn.CommandParameter}",
+                "OK");
         }
     }
 }
