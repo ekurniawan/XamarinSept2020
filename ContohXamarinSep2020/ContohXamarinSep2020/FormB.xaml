@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ContohXamarinSep2020.FormB" Title="Form B">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lblData" FontSize="Medium" 
+                   Text="Welcome to FormB"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Button x:Name="btnGetGlobal" Text="Get Global" Clicked="btnGetGlobal_Clicked" />
+            <Button x:Name="btnGetPref" Text="Get Preferences" Clicked="btnGetPref_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

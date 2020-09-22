@@ -10,7 +10,7 @@ namespace ContohXamarinSep2020
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new MyTabbedPage());
         }
 
         protected override void OnStart()

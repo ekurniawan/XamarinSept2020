@@ -3,12 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ContohXamarinSep2020.MainPage"
              Title="Home Page">
-
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Simple List" IconImageSource="ic_add.png" Order="Primary" 
+                     Clicked="btnSimpleList_Clicked" />
+        <ToolbarItem Text="Image List" Order="Secondary" 
+                     Clicked="btnImageList_Clicked" />
+    </ContentPage.ToolbarItems>
     <StackLayout>
         <Button x:Name="btnSimpleList" Text="Simple List" 
                 Clicked="btnSimpleList_Clicked" />
         <Button x:Name="btnImageList" Text="Image List" 
                 Clicked="btnImageList_Clicked" />
+        <Button x:Name="btnModalCustomList" Text="Modal Custom List"
+                Clicked="btnModalCustomList_Clicked"/>
+        <Button x:Name="btnSampleAlert" Text="Sample Alert" Clicked="btnSampleAlert_Clicked" />
+        <Button x:Name="btnActionSheet" Text="Sample Action Sheet" Clicked="btnActionSheet_Clicked" />
+        <Button x:Name="btnFormA" Text="Form A" Clicked="btnFormA_Clicked" />
+        <Button x:Name="btnPreference" Text="Buat Preferences" Clicked="btnPreference_Clicked" />
     </StackLayout>
 
 </ContentPage>
