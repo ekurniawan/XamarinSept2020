@@ -36,6 +36,7 @@ namespace ContohXamarinSep2020
                 _empDAL.Insert(newEmp);
                 await DisplayAlert("Keterangan", 
                     $"Data Employee {newEmp.EmpName} berhasil ditambah", "OK");
+                await Navigation.PopAsync();
             }
             catch (Exception ex)
             {

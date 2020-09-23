@@ -35,7 +35,7 @@ namespace ContohXamarinSep2020
                 {
                     new MyMasterPageMasterMenuItem { Id = 0, Title = "Main Menu", TargetType=typeof(MainPage), ImageIcon="ic_add.png" },
                     new MyMasterPageMasterMenuItem { Id = 1, Title = "Show Employee", TargetType=typeof(ShowEmployee), ImageIcon="ic_add.png" },
-                    new MyMasterPageMasterMenuItem { Id = 2, Title = "Add Employee", TargetType=typeof(AddEmployeeSQL), ImageIcon="ic_add.png" },
+                    new MyMasterPageMasterMenuItem { Id = 2, Title = "Custom List", TargetType=typeof(BindingDataMVVM), ImageIcon="ic_add.png" },
                     new MyMasterPageMasterMenuItem { Id = 3, Title = "Tabbed Page",TargetType=typeof(MyTabbedPage), ImageIcon="ic_add.png" },
                     new MyMasterPageMasterMenuItem { Id = 4, Title = "Simple Calc", TargetType=typeof(ContohGridLayout), ImageIcon="ic_add.png" },
                 });

@@ -28,6 +28,9 @@ namespace ContohXamarinSep2020
             lvEmployee.ItemsSource = results;
         }
 
-        
+        private async void btnAdd_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AddEmployeeSQL());
+        }
     }
 }
