@@ -5,7 +5,7 @@
              Title="Show Employee">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="lvEmployee">
+            <ListView x:Name="lvEmployee" ItemTapped="lvEmployee_ItemTapped">
                 <ListView.Header>
                     <Grid BackgroundColor="Aquamarine">
                         <Grid.RowDefinitions>
@@ -13,9 +13,10 @@
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="40" />
-                            <ColumnDefinition Width="100" />
-                            <ColumnDefinition Width="100" />
-                            <ColumnDefinition Width="100*" />
+                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         <Label Text="ID" FontSize="Medium" FontAttributes="Bold"
                                Grid.Column="0" Grid.Row="0" VerticalTextAlignment="Center" />
@@ -36,9 +37,10 @@
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="40" />
-                                    <ColumnDefinition Width="100" />
-                                    <ColumnDefinition Width="100" />
-                                    <ColumnDefinition Width="100*" />
+                                    <ColumnDefinition Width="80" />
+                                    <ColumnDefinition Width="40" />
+                                    <ColumnDefinition Width="80" />
+                                    <ColumnDefinition Width="60" />
                                 </Grid.ColumnDefinitions>
                                 <Label Text="{Binding EmpId}" Grid.Column="0" Grid.Row="0" 
                                        VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
@@ -48,6 +50,9 @@
                                        VerticalTextAlignment="Center"/>
                                 <Label Text="{Binding Qualification}" Grid.Column="3" Grid.Row="0"
                                        VerticalTextAlignment="Center"/>
+                                <Button Text="delete" WidthRequest="30" CommandParameter="{Binding EmpId}" 
+                                        FontSize="Micro" Clicked="btnDelete_Clicked" 
+                                        Grid.Column="4" Grid.Row="0" />
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
