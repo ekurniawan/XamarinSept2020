@@ -2,6 +2,7 @@
 using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ContohXamarinSep2020.DAL
@@ -25,6 +26,24 @@ namespace ContohXamarinSep2020.DAL
                           select e;
 
             return results;
+        }
+
+        public IEnumerable<Employee> GetByName(string name)
+        {
+            var results = from e in conn.Table<Employee>()
+                          where e.EmpName.ToLower().Contains(name.ToLower())
+                          orderby e.EmpName
+                          select e;
+            return results;
+        }
+
+        public Employee GetById(int empId)
+        {
+            var result = (from e in conn.Table<Employee>()
+                          where e.EmpId == empId
+                          select e).SingleOrDefault();
+
+            return result;
         }
 
         public int Insert(Employee emp)

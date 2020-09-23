@@ -69,5 +69,42 @@ namespace ContohXamarinSep2020
             }
            
         }
+
+        private async void MenuItem_Clicked(object sender, EventArgs e)
+        {
+            var myBtn = (MenuItem)sender;
+            var delEmp = new Employee
+            {
+                EmpId = Convert.ToInt32(myBtn.CommandParameter)
+            };
+            try
+            {
+                var answer = await DisplayAlert("Konfirmasi", "Apakah anda yakin untuk delete data?", "Yes", "No");
+                if (answer)
+                {
+                    _empDAL.Delete(delEmp);
+                    await DisplayAlert("Keterangan", $"ID: {myBtn.CommandParameter} berhasil di delete", "OK");
+                    RefreshData();
+                }
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", $"{ex.Message}", "OK");
+            }
+        }
+
+
+        private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtSearch.Text.Length > 3)
+            {
+                var data = _empDAL.GetByName(txtSearch.Text);
+                lvEmployee.ItemsSource = data;
+            }
+            else
+            {
+                RefreshData();
+            }
+        }
     }
 }
